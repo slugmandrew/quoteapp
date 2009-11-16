@@ -25,6 +25,17 @@ class Quote extends Doctrine_Record
 			// 'refClass' => 'QuoteMeters'
 		// ));
 		
+		$this->hasMany('Mpan as Mpans', array(
+			'local' => 'quote_id',
+			'foreign' => 'meter_id',
+			'refClass' => 'QuoteMeters'
+		));
+		
+		$this->hasMany('Mpr as Mprs', array(
+			'local' => 'quote_id',
+			'foreign' => 'meter_id',
+			'refClass' => 'QuoteMeters'
+		));
 	}
 	
 

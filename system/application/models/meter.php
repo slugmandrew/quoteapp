@@ -13,10 +13,10 @@ abstract class Meter extends Doctrine_record
 		$this->actAs('Timestampable');
 		
 		
-		$this->hasOne('Site', array(
-			'local' => 'site_id',
-			'foreign' => 'id'
-		));
+		// $this->hasOne('Site', array(
+			// 'local' => 'site_id',
+			// 'foreign' => 'id'
+		// ));
 		
 		// $this->hasMany('Quote as Quotes', array(
 			// 'local' => 'meter_id',

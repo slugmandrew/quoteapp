@@ -14,13 +14,18 @@ class Mpan extends Meter
 		
 		// $this->actAs('Timestampable');
 		
-		parent::setUp();
+		//parent::setUp();
 		
-		// $this->hasOne('Site', array(
-			// 'local' => 'site_id',
-			// 'foreign' => 'id'
-		// ));
+		$this->hasOne('Site', array(
+			'local' => 'site_id',
+			'foreign' => 'id'
+		));
 
+		$this->hasMany('Quote as Quotes', array(
+			'local' => 'meter_id',
+			'foreign' => 'quote_id',
+			'refClass' => 'QuoteMeters'
+		));
 	}
 
 }

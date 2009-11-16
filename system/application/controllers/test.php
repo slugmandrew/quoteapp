@@ -82,18 +82,28 @@ class Test extends Controller {
 		
 		// create quotes and add data
 		
-		// $quote = new Quote();
-		// $quote->Meters = 
-		// $quote->
-		// $quote->
-		// $quote->
+		$quote = new Quote();
+		$quote->name = "MyQuote1";
+		$quote->User = $user;
+		
+		
+		$quote = new Quote();
+		$quote->name = "MyQuote2";
+		$quote->User = $user2;
+		
+		$quote->Mprs[0] = $mpr;
+		$quote->Mpans[0] = $mpan;
+		$quote->Mpans[1] = $mpan2;
+
 		
 		
 		// flush() saves all unsaved objects
 		$conn = Doctrine_Manager::connection();
 		$conn->flush();
 
-		echo "Success!";
+		echo "Success!<br />";
+		
+		echo "<a href='doctrine_tools/create_tables'>Create Tables</a>";
 
 	}
 

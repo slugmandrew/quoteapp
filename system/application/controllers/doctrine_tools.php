@@ -11,8 +11,9 @@ class Doctrine_Tools extends Controller
 		if ($this->input->post('action'))
 		{
 			Doctrine::createTablesFromModels();
-			echo "Done!";
+			echo "Done!<br />";
 		}
+		echo "<a href='../test'>Fill Database</a>";
 	}
 
 }
