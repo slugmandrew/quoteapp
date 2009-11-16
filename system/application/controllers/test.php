@@ -1,18 +1,23 @@
 <?php
 class Test extends Controller {
 
-	function index() {
-		
-		// crete new user and add data
+	function index()
+	{
+		// crete new users and add data
 		$user = new user();
 		$user->username = "andrew";
 		$user->password = "topbell447";
 		$user->email = "andrew@utilitiessavings.co.uk";
 		
 		$user2 = new user();
-		$user2->username = "test";
-		$user2->password = "test";
-		$user2->email = "test@example.com";
+		$user2->username = "matt";
+		$user2->password = "popsikle";
+		$user2->email = "matt@utilitiessavings.co.uk";
+
+		$user3 = new user();
+		$user3->username = "test";
+		$user3->password = "test";
+		$user3->email = "test@example.com";
 		
 		
 		
@@ -74,7 +79,15 @@ class Test extends Controller {
 		
 		$mpr->Site = $site;
 		$mpr2->Site = $site3;
-			
+		
+		// create quotes and add data
+		
+		// $quote = new Quote();
+		// $quote->Meters = 
+		// $quote->
+		// $quote->
+		// $quote->
+		
 		
 		// flush() saves all unsaved objects
 		$conn = Doctrine_Manager::connection();
