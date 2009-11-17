@@ -22,7 +22,7 @@ class Mpr extends Meter
 		$this->hasMany('Quote as Quotes', array(
 			'local' => 'meter_id',
 			'foreign' => 'quote_id',
-			'refClass' => 'QuoteMeters'
+			'refClass' => 'QuoteMeter'
 		));
 
 	}

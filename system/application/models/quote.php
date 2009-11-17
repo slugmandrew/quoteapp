@@ -34,7 +34,13 @@ class Quote extends Doctrine_Record
 		$this->hasMany('Mpr as Mprs', array(
 			'local' => 'quote_id',
 			'foreign' => 'meter_id',
-			'refClass' => 'QuoteMeters'
+			'refClass' => 'QuoteMeter'
+		));
+		
+		$this->hasMany('Tariff as Tariffs', array(
+			'local' => 'quote_id',
+			'foreign' => 'tariff_id',
+			'refClass' => 'QuoteTariff'
 		));
 	}
 	
